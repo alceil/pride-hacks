@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Header'
+import ChatScreen from './ChatScreen'
 import TinkerCards from './TinderCards'
 import Chats from './Chats'
 import {
@@ -18,6 +19,11 @@ function App() {
     {/* <Header/> */}
 
     <Switch>
+
+    <Route path="/chats/:person">
+    <Header backButton='/chats' />
+    <ChatScreen/>
+</Route>
     <Route path="/chats">
     <Header backButton='/' />
 <Chats/>
