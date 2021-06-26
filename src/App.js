@@ -31,10 +31,11 @@ function App() {
       <Route path="/">
       <Header/>
 <TinkerCards/>
+<SwipeButtons/>
+
       </Route>
     </Switch>
   </Router>
-<SwipeButtons/>
     </div>
   );
 }

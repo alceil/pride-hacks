@@ -2,6 +2,7 @@ import {React,useState} from 'react'
 import Avatar from '@material-ui/core/Avatar';
 import './ChatScreen.css'
 function ChatScreen() {
+    const [input,setInput] =useState('')
 
     const [messages,setMessages]=useState(
         [
@@ -20,6 +21,15 @@ function ChatScreen() {
                 message:"Whats up?"
             }
         ])
+
+
+        const handleClick= e =>{
+e.preventDefault()
+setMessages([...messages,{message:input}])
+setInput('')
+        }
+
+
     return (
         <div className="chatScreen">
         <p className="chatScreen__timestamp">You matched with elen</p>
@@ -39,12 +49,14 @@ message.name?
 )   
 
 )}
-<div>
-    <form>
-        <input type="text"/>
-        <button>Send</button>
+    <form  className="chatScreen__input">
+        <input 
+        value={input}
+        onChange={(e)=>setInput(e.target.value)}  
+        className="chatScreen__inputField" 
+        type="text" />
+        <button onClick={handleClick} type="submit" className="chatScreen__inputButton">Send</button>
     </form>
-</div>
         </div>
     )
 }
