@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SwipeButtons from './SwipeButtons'
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
       </Route>
     </Switch>
   </Router>
+<SwipeButtons/>
 {/* {Header} */}
 {/* {Tinder Cards} */}
 {/* {Buttons below tinder cards} */} 
