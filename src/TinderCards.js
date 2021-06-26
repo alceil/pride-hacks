@@ -12,8 +12,17 @@ const TinderCards = () => {
             url:'https://media.npr.org/assets/img/2021/05/16/ap21033693362332_wide-0a912c70752c3fb3ec2778ff4ba7c823dd7cf987-s800-c85.jpg'
         }
     ]);
+
+
+    useEffect(()=>{
+        
+
+    },[]);
     return (
         <div>
+<div className="tinderCards__cardContainer">
+
+
 
             {people.map(person=>
                 (
@@ -26,7 +35,7 @@ preventSwipe={['up','down']}>
         {
             backgroundImage:`url(${person.url})`
         }
-    } 
+    }
     className="card">
         <h3>{person.name}</h3>
     </div>
@@ -34,8 +43,10 @@ preventSwipe={['up','down']}>
                 )
                 )
                 }
-            
-        </div>
+            </div>
+
+</div>
+
     )
 }
 

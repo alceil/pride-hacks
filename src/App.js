@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './Header'
-import TinderCards from './TinderCards';
+import TinkerCards from './TinderCards'
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +20,7 @@ function App() {
 <h1>I am chatpage</h1>
 </Route>
       <Route path="/">
-<TinderCards/>
+<TinkerCards/>
       </Route>
     </Switch>
   </Router>
